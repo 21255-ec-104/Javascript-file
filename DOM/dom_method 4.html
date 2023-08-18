@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dom method 4</title>
+</head>
+<body>
+
+    <!-- syntax:-document.querySelectorAll("#idname"(or)".classname"(or)"tagname"); -->
+  <!-- this method applied all types at a time  -->
+
+
+<h2>The querySelectorAll() Method</h2>
+<h4>Aditya engineering college</h4>
+<p>Srivalli</p>
+<h3 class="example">A heading</h2>
+<p class="example">A paragraph.</p> 
+
+<script>
+const nodeList = document.querySelectorAll(".example");
+for (let i = 0; i < nodeList.length; i++) {
+  nodeList[i].style.backgroundColor = "yellow";
+  nodeList[i].style.color = "red";
+  
+
+}
+</script>
+  
+</body>
+</html>

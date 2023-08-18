@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Course Information</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Course Name</th>
+                <th>Course Number</th>
+                <th>Course Fees</th>
+                <th>Place</th>
+            </tr>
+        </thead>
+        <tbody id="myTableBody"></tbody>
+    </table>
+    <script type="text/javascript">
+        var courses = [
+            {
+                'course name': 'html',
+                'course number': 23423,
+                'course fees': 235,
+                'place': 'dwp'
+            },
+            {
+                'course name': 'css',
+                'course number': 65687,
+                'course fees': 567,
+                'place': 'dwp'
+            },
+            {
+                'course name': 'javascript',
+                'course number': 67845,
+                'course fees': 7656,
+                'place': 'dwp'
+            }
+        ];
+
+        var tableBody = document.getElementById("myTableBody");
+        
+        for (var i = 0; i < courses.length; i++) {
+            var row = document.createElement("tr");
+            
+            var courseNameCell = document.createElement("td");
+            courseNameCell.textContent = courses[i]['course name'];
+            row.appendChild(courseNameCell);
+
+            var courseNumberCell = document.createElement("td");
+            courseNumberCell.textContent = courses[i]['course number'];
+            row.appendChild(courseNumberCell);
+
+            var courseFeesCell = document.createElement("td");
+            courseFeesCell.textContent = courses[i]['course fees'];
+            row.appendChild(courseFeesCell);
+
+            var placeCell = document.createElement("td");
+            placeCell.textContent = courses[i]['place'];
+            row.appendChild(placeCell);
+
+            tableBody.appendChild(row);
+        }
+    </script>
+</body>
+</html>

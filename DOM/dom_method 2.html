@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM methods</title>
+</head>
+<body>
+     <p class="topics">HTML</p>
+     <p class="topics">CSS</p>
+     <p class="topics">BS</p>
+     <p class="topics">JS</p>
+     <script type="text/javascript">
+     	// let paras = document.getElementByClassName('')('topics');
+     	// console.log(srivalli);
+     	// paras[0].innerHTML='Hyper text markup language';
+     	let z= document.getElementsByClassName('topics');
+     	z[0].innerHTML=" hyper text markup language";
+     </script>
+ 
+ <!-- by using tag name -->
+ <ul>
+	<li>AEC</li>
+	<li>ACET</li>
+	<li>ACOE</li>
+
+</ul>
+  <script type="text/javascript">
+  	let lis =document.getElementsByTagName('li');
+  	console.log(lis);
+  	lis[0].innerText='Aditya Engineering College';
+  </script>
+</body>
+</html>

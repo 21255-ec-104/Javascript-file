@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Var,Let,Const</title>
+</head>
+<body>
+   <script type="text/javascript">
+   //	var a=10;
+   //	document.write(a);
+   //	let b=20;
+   	//let b=30;//wrong-->redeclartion is not possible
+   //	b=30;//reinitialize is possible
+   //	document.write(b);
+ 
+
+ //block level variable
+    {
+    	let c=30;
+   	//document.write(c);
+
+    }
+   	//document.write(c);//wrong-->it cannot work after block level or block scope variables
+    const pi=3.14;//we never change that value,it not redeclared and reinitilized.
+   // pi=4.0
+   	document.write(pi);
+
+   </script>
+</body>
+</html>
