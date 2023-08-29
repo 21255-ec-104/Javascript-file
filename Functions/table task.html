@@ -16,36 +16,36 @@
             </tr>
         </thead>
         <tbody id="tbodyid">
+        	<!-- <tr></tr>
         	<tr></tr>
         	<tr></tr>
-        	<tr></tr>
-        	<tr></tr>
+        	<tr></tr> -->
         	
         </tbody>
     </table>
     <script type="text/javascript">
         var courses = [
             {
-                'course name': 'html',
-                'course number': 23423,
-                'course fees': 235,
+                'name': 'html',
+                'number': 23423,
+                'fees': 235,
                 'place': 'dwp'
             },
             {
-                'course name': 'css',
-                'course number': 65687,
-                'course fees': 567,
+                'name': 'css',
+                'number': 65687,
+                'fees': 567,
                 'place': 'dwp'
             },
             {
-                'course name': 'javascript',
-                'course number': 67845,
-                'course fees': 7656,
+                'name': 'javascript',
+                'number': 67845,
+                'fees': 7656,
                 'place': 'dwp'
             }
         ];
 
-	for (var i = 0; i < courses.length-1; i++)
+	for (var i = 0; i <=2; i++)
 	 {
 	    let tr=document.createElement('tr');
 	    
@@ -53,18 +53,15 @@
 	    let td2 = document.createElement('td')
 	    let td3 = document.createElement('td')
 	    let td4 = document.createElement('td')
-         td1.innerText=courses[i].course name
-         td2.innerText=courses[i].course number
-         td3.innerText=courses[i].course fees
+         td1.innerText=courses[i].name
+         td2.innerText=courses[i].number
+         td3.innerText=courses[i].fees
          td4.innerText=courses[i].place
-
         tr.append(td1)
         tr.append(td2)
         tr.append(td3)
         tr.append(td4)
-
-
-       document.getElementById('tbodyid').append(tr)
+        document.getElementById('tbodyid').append(tr)
 	}
 </script>
 </body>

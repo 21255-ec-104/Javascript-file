@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  input {
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  
+  .highlight {
+    border-color: red;
+  }
+</style>
+</head>
+<body>
+
+<input type="text" id="inputField" placeholder="Enter something">
+<button onclick="checkInput()">Check Input</button>
+
+<script>
+function checkInput() {
+  var inputField = document.getElementById('inputField');
+  
+  if (inputField.value === '') {
+    inputField.classList.add('highlight');
+  } else {
+    inputField.classList.remove('highlight');
+  }
+}
+
+// Adding an event listener to remove the highlight when typing
+document.getElementById('inputField').addEventListener('input', function() {
+  this.classList.remove('highlight');
+});
+</script>
+
+</body>
+</html>

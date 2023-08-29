@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Arrsy</title>
+</head>
+<body>
+	<input type="text" name="" placeholder="find count value" id="search_id">
+	<button onclick="getcnt()">click</button>
+	<p id="output_id"></p>
+    <script type="text/javascript">
+    	function getcnt(){
+    let	a =['ravi','raju','ravi','srivalli','gayatri','ravi,'];
+    var search_val ='ravi';
+    let cnt =0;
+    for (var i=0;i< a.length;i++){
+    	if (a[i].includes(search_val)==true) {
+    		cnt=cnt+1
+    	}
+    }
+    //document.write('count of given input')
+     document.getElementById('output_id').innerText = cnt;
+
+}
+    </script>
+</body>
+</html>

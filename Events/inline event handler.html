@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Event handler</title>
+</head>
+<body>
+   <!-- 1st way event properties -->
+<!-- <button onclick="test()">Click here</button> -->
+
+<!-- 2nd way event properties -->
+<!-- <button id="btn_id">click</button> -->
+
+<!-- 3rd way -->
+<button id="btn_id">click</button>
+<span id="sp_id">FSD</span>
+<script type="text/javascript">
+	//1st way event properties
+	// function test(){
+	// 	alert("testing")
+	// 	document.body.style.background='blue'
+	// }
+
+	//2nd way event properties
+	// let btn=document.getElementById('btn_id')
+	// bun.onclick=test
+	// function test(){
+	//  	alert("testing")
+	//  	document.body.style.background='blue'
+	//  }
+
+	 // let btn=document.getElementById('btn_id')
+	 // btn.onclick=function(){
+	 // 	alert("hii")
+	 // 	document.body.style.background='blue'
+	 // }
+
+	//3rd way
+	// let btn=document.getElementById('btn_id')
+	// btn.addEventListener('click',test)
+	// function test(){
+	//  	alert("testing")
+	// 	document.body.style.background='green'
+	//  }
+
+
+
+	 let btn=document.getElementById('btn_id')
+	btn.addEventListener('click',
+	function test(){
+	 	alert("testing")
+		document.body.style.background='green'
+		document.getElementById('sp_id').style.display='none'
+	 })
+
+</script>
+</body>
+</html>

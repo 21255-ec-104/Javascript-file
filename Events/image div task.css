@@ -1,0 +1,54 @@
+.a{
+	background-color: white;
+	height: 380px;
+	width: 900px;
+	border: 1px solid red;
+}
+.b{
+background-color: white;
+	height: 340px;
+	width: 550px;
+/*	border: 1px solid red;*/
+	margin: 20px;
+	float: left;	
+}
+.c{
+background-color: white;
+	height: 300px;
+	width: 250px;
+	border: 1px solid red;
+	margin: 28px;
+	float: right;
+/*	border-radius: 50%;	*/
+}
+/*.b1{
+background-color: white;
+	height: 310px;
+	width: 160px;
+	border: 1px solid red;
+	float: left;
+	margin: 10px;
+
+}
+.b2{
+background-color: white;
+	height: 310px;
+	width: 160px;
+	border: 1px solid red;
+	float: left;	
+	margin: 10px;
+
+
+}
+.b3{
+background-color: white;
+	height: 310px;
+	width: 160px;
+	border: 1px solid red;	
+	float: left;	
+	margin: 10px;
+}*/
+/*img{
+	height: 310px;
+	width: 160px;
+}*/

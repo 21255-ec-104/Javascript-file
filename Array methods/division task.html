@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Division task</title>
+    <style type="text/css">
+        P {
+            padding: 20px;
+        }
+        .trainee-container {
+            background-color: hotpink;
+            width: 800px;
+            height: 400px;
+        }
+        .header-row {
+            background-color: blue;
+            width: 800px;
+            height: 100px;
+        }
+        .data-row {
+            width: 800px;
+            height: 100px;
+        }
+        .data-cell {
+            width: 198px;
+            height: 98px;
+            border: 1px solid black;
+            float: left;
+        }
+       
+    </style>
+</head>
+<body>
+    <center>
+        <div class="trainee-container">
+            <div class="header-row">
+                <div class="data-cell"><P>NAME</P></div>
+                <div class="data-cell"><P>ROLL NO.</P></div>
+                <div class="data-cell"><P>EMAIL</P></div>
+                <div class="data-cell"><P>BRANCH</P></div>
+            </div>
+            <div id="traineesList">
+                <!-- Populated dynamically by JavaScript -->
+            </div>
+        </div>
+    </center>
+    <script type="text/javascript">
+        let trainees = [{
+            'name': 'srivalli',
+            'rollno': 1234,
+            'email': 'sri@gmail.com',
+            'branch': 'ece'
+        }, {
+            'name': 'raju',
+            'rollno': 1256,
+            'email': 'raju@gmail.com',
+            'branch': 'ece'
+        }, {
+            'name': 'durga prasad',
+            'rollno': 1567,
+            'email': 'durga@gmail.com',
+            'branch': 'ece'
+        }];
+
+        let traineesList = document.getElementById('traineesList');
+
+        trainees.map(function (individual_trainee) {
+            let div = document.createElement('div');
+            div.className = 'data-row';
+
+            let div1 = document.createElement('div');
+            div1.className = 'data-cell';
+            div1.innerText = individual_trainee.name;
+
+            let div2 = document.createElement('div');
+            div2.className = 'data-cell';
+            div2.innerText = individual_trainee.rollno;
+
+            let div3 = document.createElement('div');
+            div3.className = 'data-cell';
+            div3.innerText = individual_trainee.email;
+
+            let div4 = document.createElement('div');
+            div4.className = 'data-cell';
+            div4.innerText = individual_trainee.branch;
+
+            div.appendChild(div1);
+            div.appendChild(div2);
+            div.appendChild(div3);
+            div.appendChild(div4);
+
+            traineesList.appendChild(div);
+        });
+    </script>
+</body>
+</html>

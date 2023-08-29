@@ -1,0 +1,59 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>task on key events</title>
+</head>
+<body>
+<label> Enter name</label>
+<input type="text" onkeyup="ample(this,value)"  >
+<span></span>
+</body>
+</html>  -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>task on key events</title>
+	<style>
+		.highlight-border {
+			border: 2px solid red;
+		}
+	</style>
+</head>
+<body>
+
+<form  name="myForm" onsubmit="return validateForm()">
+	<label>Enter your name:</label>
+	<input type="text" name="fname" required onblur="highlightBorder(this, true)" onkeyup="sample(this.value)"  onfocus="highlightBorder(this, false)">
+	<input type="submit" value="Submit">
+</form>
+	<span id="abc"></span>
+<script>
+	 function highlightBorder(inputElement, apply) {
+	 	if (apply) {
+	 		inputElement.classList.add("highlight-border");
+                     document.getElementById('abc').innerText ='Please enter valid details';
+	 		    document.getElementById('abc').style.color = 'red';
+	 	} else {
+	 		inputElement.classList.remove("highlight-border");
+	 		document.getElementById
+	 	}
+	 }
+	function sample(enter_val){
+			if(enter_val==""){
+				// document.getElementById('def').style.border='3px solid red';
+			    document.getElementById('abc').innerText ='Please enter valid details';
+			    document.getElementById('abc').style.color = 'red';
+			}
+			else{
+				document.getElementById('def').innerText =enter_val ;
+			}
+		}
+</script>
+</body>
+</html> 

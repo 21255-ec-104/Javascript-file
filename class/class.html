@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>class</title>
+</head>
+<body>
+	<h1>constructor</h1>
+<script type="text/javascript">
+	class Student{
+		constructor(rno,fname,lname){
+			this.rollno=rno;//need semicolon
+			this.firstname=fname;
+			this.lastname=lname;
+
+		}
+	}
+	let Obj =new Student(1234,'srivalli','R')
+	console.log(Obj.rollno,Obj.firstname,Obj.lastname)
+
+
+	//task
+	class car{
+		constructor(model,color,company,speed){
+			this.carmodel=model;
+			this.carcolor=color;
+			this.carcompany=company;
+			this.carspeed=speed;
+
+
+		}
+
+	}
+	let Obj1 =new car('m','pink','mahindra','60kmph')
+	console.log(Obj1.carmodel,Obj1.carcolor,Obj1.carcompany,Obj1.carspeed)
+
+
+	//getfullname
+	class Person{
+		constructor(rno,fname,lname,){
+			this.rollno=rno;//need semicolon
+			this.firstname=fname;
+			this.lastname=lname;
+			function getfullname(){
+                return Student1.firstname+" "+Student1.lastname
+			}
+
+		}
+	}
+       let trainee=new Student(1234,'srivalli','R')
+       console.log(trainee.getfullname())
+
+</script>
+</body>
+</html>

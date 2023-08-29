@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculater</title>
+	<style>
+		@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+		td{
+			text-align: center;
+			font-weight: bold;
+			border: 1px solid #efe1e1;
+/*			background-color: blue;*/
+               border-radius: 10px;
+			background-color: lightcoral;
+
+		}
+		table{
+			height: 300px;
+			width: 200px;
+			background-color: white;
+/*			border: 2px solid black;*/
+/*			padding: 2px;*/
+			background-color:white ;
+		}
+		td:not(#result_id){
+			cursor:pointer;
+		}
+		#cl{
+			background-color: red;
+		}
+		#result_id{
+/*			background-color: pink;*/
+border: 2px solid lightcoral;
+            cursor: pointer;
+		}
+
+		.c{
+			background-color: white;
+		}
+		.s{
+			font-size: 20px;
+			font-family: cursive;
+			color: black;
+		}
+		#e{
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+
+	<center>
+		<h1 class="s">Calculator</h1>
+     <table  cellspacing="0" cellpadding="6">
+     	<tbody>
+     		<tr>
+     			<td colspan="4"style="height: 70px; text-align: right;" class="c"  id="result_id" onKeyup="sample(this.value)"></td>
+     		</tr>
+     		     		<tr>
+     			<td onclick="getdel('⬅️')">⬅️</td>
+     			<td id="cl"  onclick="clearall()">C</td>
+     			<td id="e" onclick="getnum('=')">=</td>
+     			<td  onclick="getpie('pie')">pie</td>		               
+     		</tr>
+     		<tr>
+     			<td onclick ="getnum('9')">9</td>
+     			<td onclick="getnum('8')">8</td>
+     			<td onclick="getnum('7')">7</td>
+     			<td onclick="getnum('/')">/</td>
+
+     		</tr>
+     		<tr>
+     			<td onclick="getnum('6')">6</td>
+     			<td onclick="getnum('5')">5</td>
+     			<td onclick="getnum('4')">4</td>
+     			<td onclick="getnum('*')">*</td>
+     			
+     		</tr>
+     		<tr>
+     			<td onclick="getnum('3')">3</td>
+     			<td onclick="getnum('2')">2</td>
+     			<td onclick="getnum('1')">1</td>
+     			<td onclick="getnum('-')">-</td>
+     			
+     		</tr>
+     		<tr>
+     			<td onclick="getnum('0')">0</td>
+     			<td onclick="getpow('^')">^</td>                       
+     			<td onclick="getnum('%')">%</td>
+     			<td onclick="getnum('+')">+</td>
+     			
+     		</tr>
+     		<tr>
+     			<td onclick="getnum('(')">(</td>
+     			<td onclick="getnum(')')">)</td>
+     			<td onclick="getnum('.')">.</td>
+     			<td onclick="getroot()">Root</td>
+     			
+     		</tr>
+
+     	</tbody>
+     </table>
+     </center>
+     <script type="text/javascript">
+     			const deleteBtn = document.querySelector(".delete");
+     	function getnum(val){
+     		if (val=='='){
+     			var res=document.getElementById('result_id').innerText;
+     			document.getElementById('result_id').innerText=
+     	eval(res);
+     		}
+     		else{
+     			document.getElementById('result_id').innerText +=val;
+     		}
+     	}
+     	 function getdel(val){
+         var display = document.getElementById("result_id");
+          if (val === "⬅️") {
+            display.innerText = display.innerText.slice(0, -1);
+        }
+    }
+    
+           // function getpow() {
+           //  var display = document.getElementById("result_id");
+            
+           //   var base =display.innerText;
+            
+           //  var result = Math.pow(base, exponent);
+           //  display.innerText = eval(result);
+        // }
+function getpow() {
+    var display = document.getElementById("result_id");
+    var base = parseFloat(display.innerText);
+    var exponent = 2; // You can change this to whatever exponent you want
+    var result = Math.pow(base, exponent);
+    display.innerText = result;
+}
+
+      
+           function getpie(){
+           	var pie = 3.14
+           	document.getElementById('result_id').innerText +=pie
+
+           }
+
+        function getroot() {
+            var display = document.getElementById("result_id");
+            var number = parseFloat(display.innerText);
+            var sqRoot = Math.sqrt(number);
+            display.innerText = sqRoot.toFixed(2);
+        }
+
+
+     	function clearall(){
+     		document.getElementById('result_id').innerText=''
+     	}
+     	// function clearall(){
+     	// 	document.getElementById('result_id').innerText=''
+     	// }
+     	//addEventListener("click", delNumber);
+    
+     </script>
+</body>
+</html>

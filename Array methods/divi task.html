@@ -1,0 +1,116 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>table data</title>
+</head>
+<body>
+    <table border="1" cellspacing="0" cellpadding="4">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Rollno</td>
+                <td>Email</td>
+                <td>Branch</td>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+    <script type="text/javascript">
+        let trainees = [{
+            'name': 'ganesh',
+            'rollno': 1234,
+            'email': 'ganesh@gmail.com',
+            'branch': 'ece'
+        }, {
+            'name': 'raju',
+            'rollno': 1256,
+            'email': 'raju@gmail.com',
+            'branch': 'ece'
+        }, {
+            'name': 'durga prasad',
+            'rollno': 1567,
+            'email': 'durga@gmail.com',
+            'branch': 'ece'
+        }, {
+            'name': 'ashok',
+            'rollno': 1789,
+            'email': 'ashok@gmail.com',
+            'branch': 'cse'
+        }];
+
+        trainees.map(function (individual_trainee) {
+            let tr = document.createElement('tr');
+            
+            let td1 = document.createElement('td');
+            td1.innerText = individual_trainee.name;
+            
+            let td2 = document.createElement('td');
+            td2.innerText = individual_trainee.rollno;
+            
+            let td3 = document.createElement('td');
+            td3.innerText = individual_trainee.email;
+            
+            let td4 = document.createElement('td');
+            td4.innerText = individual_trainee.branch;
+            
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td4);
+            
+            document.getElementById('tbody').appendChild(tr);
+        });
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+
+    .row {
+      display: flex;
+      margin-bottom: 10px;
+      background-color: lightpink;
+    }
+    .cell {
+      flex: 1;
+      border: 1px solid black;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="container"></div>
+
+<script>
+const data = [
+  ['name', ' roll no', ' percentege'],
+  ['ganesh', '  21255-ec-106', '99.9'],
+  ['srivalli', '21255-ec-106', '75'],
+  ['amulya ','21255-ec-008', ' 101'],
+];
+
+const container = document.getElementById('container');
+
+data.forEach(rowData => {
+  const rowDiv = document.createElement('div');
+  rowDiv.classList.add('row');
+  
+  rowData.forEach(cellData => {
+    const cellDiv = document.createElement('div');
+    cellDiv.classList.add('cell');
+    cellDiv.textContent = cellData;
+    rowDiv.appendChild(cellDiv);
+  });
+  
+  container.appendChild(rowDiv);
+});
+</script>
+
+</body>
+</html>

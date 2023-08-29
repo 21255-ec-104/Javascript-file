@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Event handlers</title>
+</head>
+<body>
+   <center>
+   <button onclick="incrby1()">Increment</button>
+   <button onclick="decrby1()">Decrement</button>
+    <p>output</p>
+    <p id="output_id"></p>
+    </center>
+
+   <script type="text/javascript">
+      var i=1;
+   	function incrby1(){
+         if(i<=5){
+            var res=i++
+   		document.getElementById('output_id').innerText=res
+   	}
+   }
+            
+   	   	function decrby1(){
+               if(i>0){
+                  var res=i--;
+   		document.getElementById('output_id').innerText=res
+   	}
+   }
+   </script>
+
+</body>
+</html>

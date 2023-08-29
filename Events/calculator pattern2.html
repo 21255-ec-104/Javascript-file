@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+ <script type="text/javascript">
+ 	var tds = document.querySelectorAll("#table_id td");
+ 	for (var i = 0; i < tds.length; i++) {
+ 		tds[i].addEventListener("click",function(){
+ 			if(val=='='){
+ 				getres=document.getElementById('output_id').innerText;
+ 				document.getElementById('output_id').innerText=eval(getres);
+ 			}
+ 		})
+ 	}
+ </script>
+</body>
+</html>

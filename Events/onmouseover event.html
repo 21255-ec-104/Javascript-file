@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML DOM Events</h1>
+<h2>The onmouseover Event</h2>
+ <img id="cake" onmouseover="setNewImage()" onmouseover="setNewImage1()" onmouseout="setOldImage()" src="img 2.jpg"width="300";>
+
+
+
+<script>
+function setNewImage() {
+ document.getElementById("cake").src="img 2.jpg"
+}
+
+
+// function setNewImage1() {
+//  document.getElementById("img1").src="img 3.jpg"
+// }
+
+function setOldImage() {
+ document.getElementById("cake").src="img 4.jpeg"
+}
+</script>
+
+</body>
+</html>

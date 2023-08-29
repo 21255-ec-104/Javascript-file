@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>table data</title>
+</head>
+<body>
+    <table border="1" cellspacing="0" cellpadding="4">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Rollno</td>
+                <td>Email</td>
+                <td>Branch</td>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+    <script type="text/javascript">
+        let trainees = [{
+            'name': 'srivalli',
+            'rollno': 1234,
+            'email': 'sri@gmail.com',
+            'branch': 'ece'
+        }, {
+            'name': 'raju',
+            'rollno': 1256,
+            'email': 'raju@gmail.com',
+            'branch': 'ece'
+        }, {
+            'name': 'durga prasad',
+            'rollno': 1567,
+            'email': 'durga@gmail.com',
+            'branch': 'ece'
+        }, {
+            'name': 'ashok',
+            'rollno': 1789,
+            'email': 'ashok@gmail.com',
+            'branch': 'cse'
+        }];
+
+        trainees.map(function (individual_trainee) {
+            let tr = document.createElement('tr');
+            
+            let td1 = document.createElement('td');
+            td1.innerText = individual_trainee.name;
+            
+            let td2 = document.createElement('td');
+            td2.innerText = individual_trainee.rollno;
+            
+            let td3 = document.createElement('td');
+            td3.innerText = individual_trainee.email;
+            
+            let td4 = document.createElement('td');
+            td4.innerText = individual_trainee.branch;
+            
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td4);
+            
+            document.getElementById('tbody').appendChild(tr);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Image Display</title>
+	<link rel="stylesheet" type="text/css" href="img display.css">
+</head>
+<body>
+<div id="a">
+	<div id="b">
+        <img src="1.jpg" onclick="img('1.jpg')" style="height:200px; width: 150px;">
+		<img src="2.jpg" onclick="img('2.jpg')" style="height:200px; width: 150px;">
+		<img src="3.jpg" onclick="img('3.jpg')" style="height:200px; width: 150px;">
+	</div>
+	<div id="c"></div>
+	<script type="text/javascript">
+		function img(img_path){
+			document.getElementById('c').innerHTML="<img src= '"+img_path+"'style='width:150px;height:200px;'/>";
+		}
+	</script>
+</div>
+</body>
+</html>

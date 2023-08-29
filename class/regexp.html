@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Regular Expression</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	//it used to detect same words
+	//let str='sri';
+	// let re=/batch/;
+	// let output =re.test("full stack batch");
+	// console.log(output);
+
+	//it used to detect same words
+	//case sensitive
+	// let re1 =/batch/i;
+	// let output1=re1.test("full stack BATCH");
+	// console.log(output1);
+
+
+	//it is used to checking first letter
+    re =/^b/;
+    //output2=re.test("batch");//true
+   // output2 =re.test("tbatch");//false
+	//console.log(output2);
+
+
+	//it is used to
+	// let a="batch";
+	// re =/batch/;
+	// re11 =new RegExp('{a}')
+	// output11=re11.test("fullstack batch");
+	// console.log(output11)
+
+    
+    //it is used to find index value
+  //  re=/batch/;
+	re=/batch/g;
+
+    res=re.exec("full stack batch course batch");
+    console.log(res);
+    console.log(res.index);
+    res=re.exec("full stack batch course batch");
+    //console.log(res);
+    console.log(res.index)
+
+
+//number
+    re=/^[0-9]{10}$/
+   // output =re.test("9390036521");//correct =>true
+     output=re.test("99660684839390036521");//wrong=>false
+    //exceed the range without symbol
+    console.log(output)
+// (or)
+    when we dont give any $ symbol it dont calculate range
+ re=/^[0-9]{10}/
+   // output =re.test("9390036521");//correct =>true
+     output=re.test("99660684839390036521");//wrong=>true
+    //exceed the range without symbol
+    console.log(output)
+</script>
+</body>
+</html>
